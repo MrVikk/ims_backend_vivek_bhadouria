@@ -23,4 +23,5 @@ urlpatterns = [
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('items/', include('inventory.urls')), # Include the inventory app URLs.
+    path('users/', include('users.urls')), # Include the users app URLs.
 ]

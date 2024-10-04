@@ -56,6 +56,7 @@ def item_list(request):
 
 # Update Items
 @csrf_exempt
+@permission_classes([IsAuthenticated])
 def update_item(request, pk):
     if request.method == 'PUT':
         try:
